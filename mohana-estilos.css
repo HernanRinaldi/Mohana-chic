@@ -1,0 +1,85 @@
+* {
+    padding: 2px;
+    margin: 0;
+    box-sizing: border-box;
+    background: rgb(250, 248, 248);
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+
+}
+.grid-container > * {
+    box-shadow: grey;
+    border-radius: 3px;
+    padding: 5px;
+    text-align: center;
+}
+.grid-container {
+    display: grid;
+    gap: 5px;
+    grid-template: /*areas*/
+    "HEADER" 10%
+    "NAVBAR"7%
+    "MAIN" auto
+    "ASIDE"15%
+    "FOOTER" 10% ;
+}
+.HEADER {
+    grid-area: HEADER;
+    background: white;
+    display: grid;
+    
+}
+#logo-encabezado{
+    display: grid;
+width: 100%;
+
+}
+
+.ASIDE {
+    grid-area: ASIDE;
+    background: rgb(151, 100, 235);
+}
+
+.MAIN {
+    grid-area: MAIN;
+    background: rgb(172, 157, 29);
+}
+.FOOTER {
+    grid-area: FOOTER;
+    background: rgb(38, 161, 93);
+}
+.NAVBAR {
+    grid-area: NAVBAR;
+    
+}
+
+@media (min-width: 600px) /*SE TRANFORMA DE MOVIL A IPOD */
+    {.grid-container {
+    grid-template-columns: 30% auto;
+    grid-template-rows: 100px 70px auto 70px;
+        grid-template-areas: 
+    "HEADER  HEADER"
+    "NAVBAR  NAVBAR"
+    "ASIDE  MAIN"
+    "FOOTER  FOOTER";
+ }
+}
+@media (min-width: 900px) /*SE TRANFORMA DE IPOD  a pc*/
+    {.grid-container {
+    grid-template-columns: 150px auto 400px;
+    grid-template-rows: 150px auto 500px;
+        grid-template-areas: 
+    "NAVBAR HEADER HEADER" 
+    "NAVBAR  MAIN ASIDE" 
+    "NAVBAR  MAIN  ASIDE"
+    "FOOTER  FOOTER FOOTER" 
+ }
+}
+*/
+ul{
+    list-style: none;
+
+}
